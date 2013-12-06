@@ -63,6 +63,7 @@ h4 {
   padding: 0;
 }
 
+
 .nav-list-item {
   display: inline-block;
 }
@@ -82,11 +83,61 @@ h4 {
 }
 
 
+.nav-list-mobile-trigger {
+  display: none;
+}
+
+
+@media screen and (max-width: 767px) {
+  #nav {
+    background: #202020;
+    height: 55px;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+  }
+
+  .brand {
+    float: none;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+  .brand img {
+    height: 40px;
+  }
+
+  .nav {
+    border-bottom: 0;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .nav-list-mobile-trigger {
+    color: #fff;
+    display: inline;
+    font-size: 36px;
+    left: 20px;
+    position: absolute;
+    text-decoration: none;
+    top: 10px;
+  }
+}
+
 /* PROMO */
 .promo-image {
   border: 7px solid #fff;
 }
 
+@media screen and (max-width: 767px) {
+  #promo {
+    margin-top: 50px;
+  }
+}
 
 /* CONTENT */
 .content-area {
