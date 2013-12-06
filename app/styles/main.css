@@ -82,16 +82,14 @@ h4 {
   font-size: 1.5em;
 }
 
-
 .nav-list-mobile-trigger {
   display: none;
 }
 
-
 @media screen and (max-width: 767px) {
   #nav {
     background: #202020;
-    height: 55px;
+    min-height: 55px;
     opacity: 0.9;
     position: fixed;
     top: 0;
@@ -115,6 +113,14 @@ h4 {
 
   .nav-list {
     display: none;
+    float: none;
+  }
+  .nav-list-open {
+    display: block;
+  }
+  .nav-list-item {
+    display: block;
+    padding: 3px 0;
   }
 
   .nav-list-mobile-trigger {

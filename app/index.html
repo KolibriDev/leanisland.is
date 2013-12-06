@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body>
+  <body ng-app="agileisland.isApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -28,13 +28,13 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
-    <nav id="nav">
+    <nav id="nav" ng-init="menu={mobileOpen:false}">
       <div class="grid-container">
         <div class="grid-100 nav">
           <a href="" class="brand">
             <img src="images/logo.png" alt="Agile Ísland">
           </a>
-          <ul class="nav-list">
+          <ul class="nav-list" ng-class="{ 'nav-list-open': menu.mobileOpen }">
             <li class="nav-list-item nav-list-item-active"><a href="" class="nav-list-item-btn">Forsíða</a></li>
             <li class="nav-list-item"><a href="" class="nav-list-item-btn">Skráning</a></li>
             <li class="nav-list-item"><a href="" class="nav-list-item-btn">Dagskrá</a></li>
@@ -44,7 +44,7 @@
           </ul>
         </div>
       </div>
-      <a href="" class="nav-list-mobile-trigger"><span class="icon-list"></span></a>
+      <a href="" ng-click="menu.mobileOpen=!menu.mobileOpen" class="nav-list-mobile-trigger"><span class="icon-list"></span></a>
     </nav>
 
     <section id="promo">
@@ -124,6 +124,7 @@
     </footer>
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="bower_components/angular/angular.js"></script>
     <script src="scripts/app.js"></script>
     <!-- endbuild -->
 </body>
