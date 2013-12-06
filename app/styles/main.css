@@ -215,6 +215,7 @@ footer {
 .content-area {
   background: #fff;
   color: #000;
+  padding-bottom: 20px;
 }
 
 .content-area h1, .content-area h2, .content-area h3 {
