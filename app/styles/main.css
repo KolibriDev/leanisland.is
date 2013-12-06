@@ -79,6 +79,7 @@ h4 {
 
 .nav-list-item {
   display: inline-block;
+  font-weight: bold;
 }
 
 .nav-list-item-btn {
