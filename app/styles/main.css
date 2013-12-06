@@ -91,6 +91,22 @@ footer {
 .nav {
   border-bottom: 1px solid red;
   padding-bottom: 5px;
+  position: relative;
+}
+.nav-border-fade {
+  bottom: 0;
+  height: 1px;
+  margin-bottom: -1px;
+  position: absolute;
+  width: 100px;
+}
+.nav-border-left-fade {
+  background-image: linear-gradient(to left, transparent 0%, #202020 100%);
+  left: 0;
+}
+.nav-border-right-fade {
+  background-image: linear-gradient(to right, transparent 0%, #202020 100%);
+  right: 0;
 }
 
 .nav-list {
