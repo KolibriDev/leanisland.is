@@ -6,9 +6,10 @@
 body {
   background: #202020;
   color: #fff;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 14px;
   padding-top: 20px;
 }
-
 
 nav, section, footer {
   margin-bottom: 30px;
