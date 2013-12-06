@@ -31,18 +31,20 @@
 
     <nav id="nav" ng-init="menu={mobileOpen:false}">
       <div class="grid-container">
-        <div class="grid-100 nav">
-          <a href="" class="brand">
-            <img src="images/logo.png" alt="Agile Ísland">
-          </a>
-          <ul class="nav-list" ng-class="{ 'nav-list-open': menu.mobileOpen }">
-            <li class="nav-list-item nav-list-item-active"><a href="" class="nav-list-item-btn">Forsíða</a></li>
-            <li class="nav-list-item"><a href="" class="nav-list-item-btn">Skráning</a></li>
-            <li class="nav-list-item"><a href="" class="nav-list-item-btn">Dagskrá</a></li>
-            <li class="nav-list-item"><a href="" class="nav-list-item-btn">Námskeið</a></li>
-            <li class="nav-list-item"><a href="" class="nav-list-item-btn">Samstarfsaðilar</a></li>
-            <li class="nav-list-item"><a href="" class="nav-list-item-btn">Um Opið rými</a></li>
-          </ul>
+        <div class="grid-100">
+          <div class="nav clearfix">
+            <a href="" class="brand">
+              <img src="images/logo.png" alt="Agile Ísland">
+            </a>
+            <ul class="nav-list" ng-class="{ 'nav-list-open': menu.mobileOpen }">
+              <li class="nav-list-item nav-list-item-active"><a href="" class="nav-list-item-btn">Forsíða</a></li>
+              <li class="nav-list-item"><a href="" class="nav-list-item-btn">Skráning</a></li>
+              <li class="nav-list-item"><a href="" class="nav-list-item-btn">Dagskrá</a></li>
+              <li class="nav-list-item"><a href="" class="nav-list-item-btn">Námskeið</a></li>
+              <li class="nav-list-item"><a href="" class="nav-list-item-btn">Samstarfsaðilar</a></li>
+              <li class="nav-list-item"><a href="" class="nav-list-item-btn">Um Opið rými</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <a href="" ng-click="menu.mobileOpen=!menu.mobileOpen" class="nav-list-mobile-trigger"><span class="icon-list"></span></a>
@@ -50,7 +52,7 @@
 
     <section id="promo">
       <div class="grid-container">
-        <div class="grid-100">
+        <div class="grid-100 grid-parent">
           <div class="grid-50">
             <img src="images/faces.png" class="promo-image img-responsive" alt="Hey look at how much fun this is!">
           </div>

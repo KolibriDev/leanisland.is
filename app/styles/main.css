@@ -4,7 +4,7 @@
 }
 
 body {
-  background: #202020;
+  background: #202020 url(../images/bg.png) 0 0 repeat;
   color: #fff;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -21,6 +21,10 @@ h1, h2, h3 {
 
 h4 {
   color: red;
+}
+
+.grid-container {
+  max-width: 960px;
 }
 
 .img-responsive {
