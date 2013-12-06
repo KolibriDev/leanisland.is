@@ -1,4 +1,4 @@
-This is a fun exercise where we mimic [http://agileisland.is](agileisland.is).
+This is a fun exercise where we mimic [agileisland.is](http://agileisland.is).
 
 # Getting started
 
@@ -9,4 +9,4 @@ This is a fun exercise where we mimic [http://agileisland.is](agileisland.is).
 
 + `normalize-css` for base css across browsers
 + `unsemantic` for grid
-+ [http://icomoon.io](icomoon) for icons in fonts
++ [icomoon.io](http://icomoon.io) for icons in fonts
