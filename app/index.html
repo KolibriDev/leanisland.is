@@ -2,8 +2,11 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
@@ -18,8 +21,9 @@
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-  </head>
-  <body ng-app="agileisland.isApp">
+</head>
+
+<body ng-app="leanisland.isApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -28,111 +32,155 @@
       <script src="bower_components/es5-shim/es5-shim.js"></script>
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
-
-    <nav id="nav" ng-init="menu={mobileOpen:false}">
-      <div class="grid-container">
-        <div class="grid-100">
-          <div class="nav clearfix">
-            <div class="nav-border-fade nav-border-left-fade"></div>
-            <div class="nav-border-fade nav-border-right-fade"></div>
-            <a href="" class="brand">
-              <img src="images/logo.png" alt="Agile Ísland">
+    <div class="wrapper">
+        <nav id="nav" ng-init="menu={mobileOpen:false};active=1">
+            <div class="grid-container">
+                <div class="grid-100">
+                    <div class="nav clearfix">
+                        <a href="" class="brand">
+                            <img src="images/logo.png" alt="Agile Ísland">
+                        </a>
+                        <ul class="nav-list" ng-class="{ 'nav-list-open': menu.mobileOpen }">
+                            <li class="nav-list-item" ng-class="{' nav-list-item-active' : active==1 }"><a href="/" class="nav-list-item-btn">Forsíða</a>
+                            </li>
+                            <li class="nav-list-item" ng-class="{' nav-list-item-active' : active==2 }"><a href="#/skraning/" class="nav-list-item-btn" ng-click="active=2">Skráning</a>
+                            </li>
+                            <li class="nav-list-item" ng-class="{' nav-list-item-active' : active==3 }"><a href="#/dagskra/" class="nav-list-item-btn" ng-click="active=3">Dagskrá</a>
+                            </li>
+                            <li class="nav-list-item" ng-class="{' nav-list-item-active' : active==4 }"><a href="#/namskeid/" class="nav-list-item-btn" ng-click="active=4">Námskeið</a>
+                            </li>
+                            <li class="nav-list-item" ng-class="{' nav-list-item-active' : active==5 }"><a href="#/um-opid-rymi/" class="nav-list-item-btn" ng-click="active=5">Um Opið rými</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a href="" ng-click="menu.mobileOpen=!menu.mobileOpen" class="nav-list-mobile-trigger">
+                <span class="icon-list"></span>
             </a>
-            <ul class="nav-list" ng-class="{ 'nav-list-open': menu.mobileOpen }">
-              <li class="nav-list-item nav-list-item-active"><a href="" class="nav-list-item-btn">Forsíða</a></li>
-              <li class="nav-list-item"><a href="" class="nav-list-item-btn">Skráning</a></li>
-              <li class="nav-list-item"><a href="" class="nav-list-item-btn">Dagskrá</a></li>
-              <li class="nav-list-item"><a href="" class="nav-list-item-btn">Námskeið</a></li>
-              <li class="nav-list-item"><a href="" class="nav-list-item-btn">Samstarfsaðilar</a></li>
-              <li class="nav-list-item"><a href="" class="nav-list-item-btn">Um Opið rými</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <a href="" ng-click="menu.mobileOpen=!menu.mobileOpen" class="nav-list-mobile-trigger"><span class="icon-list"></span></a>
-    </nav>
+        </nav>
 
-    <section id="promo">
-      <div class="grid-container">
-        <div class="grid-100 grid-parent">
-          <div class="grid-50">
-            <img src="images/faces.png" class="promo-image img-responsive" alt="Hey look at how much fun this is!">
-          </div>
-          <div class="grid-50">
-            <div class="promo-text">
-              <h2>Nútíma hugbúnaðarþróun</h2>
-              <p>Agile Ísland ráðstefnan verður haldin þann 20. nóvember á Hilton Reykjavík Nordica.</p>
-              <a href="" class="btn">Skráning <span class="icon-arrow-right"></span><span class="icon-arrow-right"></span></a>
+        <section id="promo">
+            <div class="grid-container promo-contain">
+                <div class="grid-100 grid-parent">
+                    <div class="grid-50">
+                        <div class="promo-text">
+                            <h2>Betri stjórnun, betri fyrirtæki</h2>
+                            <p>Lean Ísland ráðstefnan verður haldin þann 7. maí 2013 á Hilton.</p>
+                            <a href="" class="btn">Skráning <span class="icon-arrow-right"></span><span class="icon-arrow-right"></span></a>
+                        </div>
+                    </div>
+                    <div class="grid-50">
+                        <img src="images/faces.png" class="promo-image img-responsive" alt="Hey look at how much fun this is!">
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section id="content">
-      <div class="grid-container">
-        <div class="grid-100">
-          <div class="content-area">
-            <div class="content-text">
-              <h3>Agile Ísland í sjöunda sinn þann 20. nóvember</h3>
-              <p>Agile Ísland 2013 ráðstefnan er sú sjöunda í röð Agile ráðstefna sem haldnar hafa verið á Íslandi.</p>
+        <section id="content">
+            <div class="grid-container contain-wrap">
+                <div class="grid-100">
+                    <div class="content-area">
+                        <div class="content-text">
+                            <!--<ng-include src="'views/main.html'"></ng-include>-->
+                            <div ng-view=""></div>
+                        </div>
+                        <!--
+                        <div class="content-text">
+                            <h3>Agile Ísland í sjöunda sinn þann 20. nóvember</h3>
+                            <p>Agile Ísland 2013 ráðstefnan er sú sjöunda í röð Agile ráðstefna sem haldnar hafa verið á Íslandi.</p>
 
-              <p>Tvær fyrirlestrarbrautir verða í boði á Agile Ísland 2013, Fólkið og Tæknin. Opna rýmið verður á sínum stað og er greinilega búið að festa sig í sessi á ráðstefnunni. Nánari lýsingu á því má finna hér. </p>
+                            <p>Tvær fyrirlestrarbrautir verða í boði á Agile Ísland 2013, Fólkið og Tæknin. Opna rýmið verður á sínum stað og er greinilega búið að festa sig í sessi á ráðstefnunni. Nánari lýsingu á því má finna hér.</p>
 
-              <p>Skoðaðu dagskrá Agile Ísland 2013.</p>
+                            <p>Skoðaðu dagskrá Agile Ísland 2013.</p>
 
-              <p>Að venju verða líka námskeið í ráðstefnuvikunni. Skoðaðu hvað er í boði.</p>
+                            <p>Að venju verða líka námskeið í ráðstefnuvikunni. Skoðaðu hvað er í boði.</p>
 
-              <p>Allir viðburðir í Agile Ísland ráðstefnuvikunni eru haldnir á Hilton Reykjavík Nordica.</p>
+                            <p>Allir viðburðir í Agile Ísland ráðstefnuvikunni eru haldnir á Hilton Reykjavík Nordica.</p>
 
-              <h4>Fyrir hvern er Agile Ísland 2013?</h4>
+                            <h4>Fyrir hvern er Agile Ísland 2013?</h4>
 
-              <p>Ráðstefnan er fyrir allt það fólk sem hefur áhuga á að læra um (t.d.):</p>
-              <ul>
-                <li>Innleiðingu og þróun á Agile aðferðum</li>
-                <li>Agile verktækni</li>
-                <li>Agile vörustjórnun</li>
-                <li>Prófanir í Agile teymum</li>
-                <li>Listina að rækta upp öflug teymi</li>
-                <li>Agile vinnukerfi</li>
-                <li>Hlutverk leiðtoga/stjórnenda í Agile umhverfi</li>
-                <li>Fókusinn verður á praktíska reynslu, bæði á fyrirlestrarbrautunum og Opna rýminu.</li>
-              </ul>
+                            <p>Ráðstefnan er fyrir allt það fólk sem hefur áhuga á að læra um (t.d.):</p>
+                            <ul>
+                                <li>Innleiðingu og þróun á Agile aðferðum</li>
+                                <li>Agile verktækni</li>
+                                <li>Agile vörustjórnun</li>
+                                <li>Prófanir í Agile teymum</li>
+                                <li>Listina að rækta upp öflug teymi</li>
+                                <li>Agile vinnukerfi</li>
+                                <li>Hlutverk leiðtoga/stjórnenda í Agile umhverfi</li>
+                                <li>Fókusinn verður á praktíska reynslu, bæði á fyrirlestrarbrautunum og Opna rýminu.</li>
+                            </ul>
 
-              <p><a href="" class="btn">Skráning <span class="icon-arrow-right"></span><span class="icon-arrow-right"></span></a></p>
+                            <p><a href="" class="btn">Skráning <span class="icon-arrow-right"></span><span class="icon-arrow-right"></span></a>
+                            </p>
+                        </div>-->
+                        <div class="content-sponsor">
+                        <!--
+                            <h3 class="content-sponsor-title">
+                                <span class="content-sponsor-title-gold">Gull</span>samstarfsaðilar</h3>
+                            <a href="" class="sponsor-list-item">
+                                <img src="images/ccp_logo.png" alt="CCP">
+                            </a>
+                            <a href="" class="sponsor-list-item">
+                                <img src="images/arion_logo.png" alt="Arion Banki">
+                            </a>
+                        -->
+                            <h3 class="content-sponsor-title"><span class="content-sponsor-title-silver">Silfur</span>samstarfsaðilar</h3>
+                            <a href="www.landsbanki.is" target="_blank" class="sponsor-list-item">
+                                <img src="images/LB_Merki.jpg" alt="Landsbankinn">
+                            </a>
+                              <a href="www.ossur.is" target="_blank" class="sponsor-list-item">
+                                <img src="images/ossur.jpg" alt="Össur">
+                            </a>
+                            <a href="www.si.is" target="_blank" class="sponsor-list-item">
+                                <img src="images/SI.jpg" alt="Samtök iðnaðarins">
+                            </a>
+
+                            <h3 class="content-sponsor-title"><span class="content-sponsor-title-bronze">Brons</span>samstarfsaðilar</h3>
+                            <a href="http://www.alcoa.com/iceland/ic/info_page/home.asp" class="sponsor-list-item" target="_blank">
+                              <img src="images/Alcoa.png" alt="Alcoa Fjarðaál" title="Alcoa Fjarðaál">
+                            </a>
+                            <a href="http://www.actavis.is" target="_blank" class="sponsor-list-item">
+                              <img src="images/Actavis.png" alt="Actavis" title="Actavis">
+                            </a>
+                            <a href="http://www.nmi.is/" target="_blank" class="sponsor-list-item">
+                              <img src="images/NMI.png" alt="NMI" title="NMI">
+                            </a>
+
+                            <h3 class="content-sponsor-title">TENGSLASAMSTARF</h3>
+                            <a href="http://www.dokkan.is" target="_blank" class="sponsor-list-item"><img src="images/Dokkan.png" alt="Dokkan" title="Dokkan"></a>
+                            <a href="http://www.vsf.is" target="_blank" class="sponsor-list-item"><img src="images/VSF3.png" alt="Verkefnastjórnunarfélag Íslands" title="Verkefnastjórnunarfélag Íslands"></a>
+                            <a href="http://www.agilenetid.is" target="_blank" class="sponsor-list-item"><img src="images/Agilenetid.jpg" alt="Agilenetið" title="Agilenetið"></a>
+                            <a href="http://www.mpmfelag.is" target="_blank" class="sponsor-list-item"><img src="images/MPM3.png" alt="MPM félagið" title="MPM félagið"></a>
+                            <small><a href="mailto:lean@sprettur.is" class="mailto">Ég hef áhuga á að gerast samstarfsaðili</a></small>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="content-sponsor">
-              <h3 class="content-sponsor-title"><span class="content-sponsor-title-gold">Gull</span> samstarfsaðilar</h3>
-              <a href="" class="sponsor-list-item"><img src="images/ccp_logo.png" alt="CCP"></a>
-              <a href="" class="sponsor-list-item"><img src="images/arion_logo.png" alt="Arion Banki"></a>
-              <h3 class="content-sponsor-title"><span class="content-sponsor-title-silver">Silfur</span> samstarfsaðilar</h3>
-              <a href="" class="sponsor-list-item"><img src="images/spotify_logo.png" alt="Spotify"></a>
-              <h3 class="content-sponsor-title"><span class="content-sponsor-title-bronze">Brons</span> samstarfsaðilar</h3>
-              <a href="" class="sponsor-list-item"><img src="images/betware_logo.gif" alt="Betware"></a>
-              <a href="" class="sponsor-list-item"><img src="images/li_logo.jpg" alt="Landsbanki"></a>
+        </section>
+
+        <footer>
+            <div class="grid-container">
+                <div class="grid-100">
+                    <a href="" class="companybrand">
+                        <img src="images/sprettur_logo.png" alt="Sprettur">
+                    </a>
+
+                    <div class="company-text">
+                        Sprettur - þróun og stjórnun ehf. | Laugavegur 26 - 101 Reykjavík s: 522-8900 | <a href="mailto:info@sprettur.is">info@sprettur.is</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </footer>
 
-    <footer>
-      <div class="grid-container">
-        <div class="grid-100">
-          <a href="" class="companybrand">
-            <img src="images/sprettur_logo.png" alt="Sprettur">
-          </a>
-
-          <div class="company-text">
-            Sprettur - þróun og stjórnun ehf.  |  Laugavegur 26 - 101 Reykjavík s: 522-8900  |  <a href="mailto:info@sprettur.is">info@sprettur.is</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- build:js({.tmp,app}) scripts/scripts.js -->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="scripts/app.js"></script>
-    <!-- endbuild -->
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <!-- endbuild -->
+    </div>
 </body>
+
 </html>

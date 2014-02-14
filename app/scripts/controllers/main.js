@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('agileisland.isApp')
+angular.module('leanisland.isApp')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

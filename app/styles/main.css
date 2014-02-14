@@ -4,11 +4,8 @@
 }
 
 body {
-  background: #202020 url(../images/bg.png) 0 0 repeat;
-  color: #fff;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 14px;
-  padding-top: 20px;
 }
 
 nav, section, footer {
@@ -16,7 +13,6 @@ nav, section, footer {
 }
 
 h1, h2, h3 {
-  color: #fff;
 }
 
 h4 {
@@ -33,6 +29,10 @@ a:hover {
 
 .grid-container {
   max-width: 960px;
+}
+
+.wrapper{
+  background: url(../images/stripe.png) 0 0 repeat-x;  
 }
 
 .img-responsive {
@@ -86,10 +86,10 @@ footer {
 /* NAV */
 .brand {
   float: left;
+  padding-top: 18px;
 }
 
 .nav {
-  border-bottom: 1px solid red;
   padding-bottom: 5px;
   position: relative;
 }
@@ -100,20 +100,12 @@ footer {
   position: absolute;
   width: 100px;
 }
-.nav-border-left-fade {
-  background-image: linear-gradient(to left, transparent 0%, #202020 100%);
-  left: 0;
-}
-.nav-border-right-fade {
-  background-image: linear-gradient(to right, transparent 0%, #202020 100%);
-  right: 0;
-}
 
 .nav-list {
   float: right;
   list-style: none;
   margin: 0;
-  margin-top: 50px;
+  margin-top: 93px;
   padding: 0;
 }
 
@@ -124,13 +116,13 @@ footer {
 }
 
 .nav-list-item-btn {
-  color: #fff;
+  color: black;
   padding: 2px 10px;
   text-decoration: none;
   text-transform: uppercase;
 }
 .nav-list-item-btn:hover {
-  color: red;
+  color: #c6232e;
   text-decoration: none;
 }
 
@@ -189,17 +181,21 @@ footer {
     top: 10px;
   }
 }
-
-/* PROMO */
-.promo-image {
-  border: 7px solid #fff;
+.contain-wrap{
+  border: 1px solid #f3f3f3;
+  box-shadow: rgba(0,0,0, .1) 0px 0px 20px;
 }
-
+/* PROMO */
+#promo{
+  margin-bottom: 0;
+}
 .promo-text {
   margin: 0 20px;
-  padding-top: 40px;
 }
-
+.promo-contain{
+  background: url(../images/bottom_stripe.png) 0 100% repeat-x; 
+  padding: 0;
+}
 @media screen and (max-width: 767px) {
   #promo {
     margin-top: 50px;
@@ -224,7 +220,7 @@ footer {
 
 
 .content-area {
-  min-height: 700px;
+  min-height: 1035px;
   position: relative;
 }
 
@@ -232,7 +228,9 @@ footer {
   padding: 20px;
   padding-right: 320px;
 }
-
+.content-text h2{
+  color: #c6232e;
+}
 .content-sponsor {
   border-left: 1px solid #ccc;
   bottom: 40px;
@@ -294,4 +292,14 @@ h3.content-sponsor-title {
     position: static;
     width: auto;
   }
+}
+
+img.right{
+  float: right;
+  clear: right;
+  margin: .2em 0 .5em 2em;
+}
+.mailto{
+  color: #711;
+  text-decoration: none;
 }
