@@ -33,6 +33,7 @@ a:hover {
 
 .wrapper{
   background: url(../images/stripe.png) 0 0 repeat-x;  
+  margin-top: -10px;
 }
 
 .img-responsive {
@@ -190,10 +191,12 @@ footer {
   margin-bottom: 0;
 }
 .promo-text {
-  margin: 0 20px;
+  margin: 50px 23px;
+  font-size: 1.333em;
+  line-height: 1em;
 }
 .promo-contain{
-  background: url(../images/bottom_stripe.png) 0 100% repeat-x; 
+  /*background: url(../images/bottom_stripe.png) 0 100% repeat-x; */
   padding: 0;
 }
 @media screen and (max-width: 767px) {
@@ -208,6 +211,9 @@ footer {
 }
 
 /* CONTENT */
+#content{
+  margin-top: 10px;
+}
 .content-area {
   background: #fff;
   color: #000;
