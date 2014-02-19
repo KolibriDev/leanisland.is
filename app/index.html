@@ -33,7 +33,7 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
     <div class="wrapper">
-        <nav id="nav" ng-init="menu={mobileOpen:false};active=1">
+        <nav id="nav" ng-init="menu={mobileOpen:false};">
             <div class="grid-container">
                 <div class="grid-100">
                     <div class="nav clearfix">
@@ -41,15 +41,16 @@
                             <img src="images/logo.png" alt="Agile Ísland">
                         </a>
                         <ul class="nav-list" ng-class="{ 'nav-list-open': menu.mobileOpen }">
-                            <li class="nav-list-item" ng-class="{' nav-list-item-active' : active==1 }"><a href="/" class="nav-list-item-btn">Forsíða</a>
+                            <li class="nav-list-item mainLink">
+                                <a href="/" class="nav-list-item-btn">Forsíða</a>
                             </li>
-                            <li class="nav-list-item" ng-class="{' nav-list-item-active' : active==2 }"><a href="#/skraning/" class="nav-list-item-btn" ng-click="active=2">Skráning</a>
+                            <li class="nav-list-item skraning"><a href="#/skraning/" class="nav-list-item-btn">Skráning</a>
                             </li>
-                            <li class="nav-list-item" ng-class="{' nav-list-item-active' : active==3 }"><a href="#/dagskra/" class="nav-list-item-btn" ng-click="active=3">Dagskrá</a>
+                            <li class="nav-list-item dagskra"><a href="#/dagskra/" class="nav-list-item-btn">Dagskrá</a>
                             </li>
-                            <li class="nav-list-item" ng-class="{' nav-list-item-active' : active==4 }"><a href="#/namskeid/" class="nav-list-item-btn" ng-click="active=4">Námskeið</a>
+                            <li class="nav-list-item namskeid"><a href="#/namskeid/" class="nav-list-item-btn">Námskeið</a>
                             </li>
-                            <li class="nav-list-item" ng-class="{' nav-list-item-active' : active==5 }"><a href="#/um-opid-rymi/" class="nav-list-item-btn" ng-click="active=5">Um Opið rými</a>
+                            <li class="nav-list-item um-opid-rymi"><a href="#/um-opid-rymi/" class="nav-list-item-btn">Um Opið rými</a>
                             </li>
                         </ul>
                     </div>
@@ -67,10 +68,11 @@
                         <img src="images/faces.png" class="promo-image img-responsive" alt="Hey look at how much fun this is!">
                     </div>
                     <div class="grid-50">
+                        {{active}}
                         <div class="promo-text">
                             <h2>Betri stjórnun, betri fyrirtæki</h2>
                             <p>Lean Ísland ráðstefnan verður haldin þann 7. maí 2013 á Hilton.</p>
-                            <a href="" class="btn">Skráning <span class="icon-arrow-right"></span><span class="icon-arrow-right"></span></a>
+                            <a href="#/skraning/" class="btn">Skráning <span class="icon-arrow-right"></span><span class="icon-arrow-right"></span></a>
                         </div>
                     </div>
                 </div>
@@ -116,7 +118,7 @@
                             </p>
                         </div>-->
                         <div class="content-sponsor">
-                        <!--
+                            <!--
                             <h3 class="content-sponsor-title">
                                 <span class="content-sponsor-title-gold">Gull</span>samstarfsaðilar</h3>
                             <a href="" class="sponsor-list-item">
@@ -126,34 +128,45 @@
                                 <img src="images/arion_logo.png" alt="Arion Banki">
                             </a>
                         -->
-                            <h3 class="content-sponsor-title"><span class="content-sponsor-title-silver">Silfur</span>samstarfsaðilar</h3>
+                            <h3 class="content-sponsor-title">
+                                <span class="content-sponsor-title-silver">Silfur</span>samstarfsaðilar</h3>
                             <a href="www.landsbanki.is" target="_blank" class="sponsor-list-item">
                                 <img src="images/LB_Merki.jpg" alt="Landsbankinn">
                             </a>
-                              <a href="www.ossur.is" target="_blank" class="sponsor-list-item">
+                            <a href="www.ossur.is" target="_blank" class="sponsor-list-item">
                                 <img src="images/ossur.jpg" alt="Össur">
                             </a>
                             <a href="www.si.is" target="_blank" class="sponsor-list-item">
                                 <img src="images/SI.jpg" alt="Samtök iðnaðarins">
                             </a>
 
-                            <h3 class="content-sponsor-title"><span class="content-sponsor-title-bronze">Brons</span>samstarfsaðilar</h3>
+                            <h3 class="content-sponsor-title">
+                                <span class="content-sponsor-title-bronze">Brons</span>samstarfsaðilar</h3>
                             <a href="http://www.alcoa.com/iceland/ic/info_page/home.asp" class="sponsor-list-item" target="_blank">
-                              <img src="images/Alcoa.png" alt="Alcoa Fjarðaál" title="Alcoa Fjarðaál">
+                                <img src="images/Alcoa.png" alt="Alcoa Fjarðaál" title="Alcoa Fjarðaál">
                             </a>
                             <a href="http://www.actavis.is" target="_blank" class="sponsor-list-item">
-                              <img src="images/Actavis.png" alt="Actavis" title="Actavis">
+                                <img src="images/Actavis.png" alt="Actavis" title="Actavis">
                             </a>
                             <a href="http://www.nmi.is/" target="_blank" class="sponsor-list-item">
-                              <img src="images/NMI.png" alt="NMI" title="NMI">
+                                <img src="images/NMI.png" alt="NMI" title="NMI">
                             </a>
 
                             <h3 class="content-sponsor-title">TENGSLASAMSTARF</h3>
-                            <a href="http://www.dokkan.is" target="_blank" class="sponsor-list-item"><img src="images/Dokkan.png" alt="Dokkan" title="Dokkan"></a>
-                            <a href="http://www.vsf.is" target="_blank" class="sponsor-list-item"><img src="images/VSF3.png" alt="Verkefnastjórnunarfélag Íslands" title="Verkefnastjórnunarfélag Íslands"></a>
-                            <a href="http://www.agilenetid.is" target="_blank" class="sponsor-list-item"><img src="images/Agilenetid.jpg" alt="Agilenetið" title="Agilenetið"></a>
-                            <a href="http://www.mpmfelag.is" target="_blank" class="sponsor-list-item"><img src="images/MPM3.png" alt="MPM félagið" title="MPM félagið"></a>
-                            <small><a href="mailto:lean@sprettur.is" class="mailto">Ég hef áhuga á að gerast samstarfsaðili</a></small>
+                            <a href="http://www.dokkan.is" target="_blank" class="sponsor-list-item">
+                                <img src="images/Dokkan.png" alt="Dokkan" title="Dokkan">
+                            </a>
+                            <a href="http://www.vsf.is" target="_blank" class="sponsor-list-item">
+                                <img src="images/VSF3.png" alt="Verkefnastjórnunarfélag Íslands" title="Verkefnastjórnunarfélag Íslands">
+                            </a>
+                            <a href="http://www.agilenetid.is" target="_blank" class="sponsor-list-item">
+                                <img src="images/Agilenetid.jpg" alt="Agilenetið" title="Agilenetið">
+                            </a>
+                            <a href="http://www.mpmfelag.is" target="_blank" class="sponsor-list-item">
+                                <img src="images/MPM3.png" alt="MPM félagið" title="MPM félagið">
+                            </a>
+                            <small><a href="mailto:lean@sprettur.is" class="mailto">Ég hef áhuga á að gerast samstarfsaðili</a>
+                            </small>
                         </div>
                     </div>
                 </div>
@@ -176,6 +189,7 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/angular-route/angular-route.min.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
